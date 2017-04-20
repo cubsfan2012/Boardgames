@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width"/>
+	<title>Check Out My Collection</title>
+<body>
+	<p><font size="6"><b>Check Out My Collection!</b></font></p>
+	<p>Click on game to view on BoardGameGeek</p>
+</body>
+	<style>
+		.tooltip {
+			border:2px solid #f7eed7;
+			border-radius:4px;
+			padding:10px;
+			margin-bottom:10px;
+			margin-left:0px;
+			background-color:#f7eed7;
+			font:12px Verdana;
+			line-height:18px;
+			box-shadow: 0px 3px 10px grey;
+		}
+			a {
+				cursor:pointer;
+				color:blue;
+				text-align: center
+			}
+			a:hover {
+				color:black;
+			}
+			label {
+				display:inline-block;
+				width:250px;
+				text-align:right;
+				padding:5px;
+			}
+			a:link {
+				color:blue;
+				text-decoration: underline;
+			}
+	</style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.imagemapster.min.js"></script>
+	<script type="text/javascript">
+				$(document).ready(function() {
+			$('img').mapster({
+				fillOpacity: 0.5,
+				render_highlight: {
+					fillColor: 'f7eed7',
+					stroke: true,
+					strokeColor: 'f7eed7'
+				},
+								clickNavigate: true,
+								fadeInterval: 50,
+				showToolTip: true,
+				onClick: function (e) {
+					$('#coordinateslabel').hide();
+					$('#deletelabel').show();
+					var thisId = e.key;
+					thisId = thisId.replace('game-', '');
+					$('#existing').val(thisId);
+					console.log($('#existing').val());
+					$('#game').val(thisId);
+					$('#description').val($('#hd'+thisId).val());
+				},
+				toolTipContainer: '<div class="tooltip" style="text-align:left;max-width:200px;"></div>',
+				mapKey: 'data-key',
+				areas: [
+													{
+									key: 'game-138',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Star Wars Rebellion</b><br/>2-4 Players, Recommended 2 Players, 240 min playtime'
+								}
+							,								{
+									key: 'game-189',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Blood Rage</b><br/>2-4 Players, Recommended 4 Players, 60-90 min playtime'
+								}
+							,								{
+									key: 'game-9',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Gravwell: Escape the 9th Dimension</b><br/>1-4 Players, Recommended 3-4 Players, 20-35 min playtime'
+								}
+							,								{
+									key: 'game-182',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Sheriff of Nottingham</b><br/>3-5 Players, Recommended 5 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-155',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Star Wars: X-Wing Miniatures Game</b><br/>2-4 Players, Recommended 2 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-141',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Star Wars: X-Wing Miniatures Game The Force Awakens</b><br/>2-4 Players, Recommended 2 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-255',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Spyfall</b><br/>3-8 Players, Recommended 6 Players, 15 min playtime'
+								}
+							,								{
+									key: 'game-128',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders Duel</b><br/>2 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-250',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Farkle Party</b><br/>2-8 Players, Recommended 3-4 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-249',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Lost Cities</b><br/>2 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-97',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Patchwork</b><br/>2 Players, 15-30 min playtime'
+								}
+							,								{
+									key: 'game-91',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Coup</b><br/>2-6 Players, Recommended 5 Players, 15 min playtime'
+								}
+							,								{
+									key: 'game-257',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Citadels</b><br/>2-8 Players, Recommended 5 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-136',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>One Night Ultimate Werewolf</b><br/>3-10 Players, Recommended 6-8 Players, 10 min playtime'
+								}
+							,								{
+									key: 'game-130',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Forbidden Island</b><br/>2-4 Players, Recommended 4 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-8',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Codenames: Deep Undercover</b><br/>4-8 Players, Recommended 6 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-32',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Codenames</b><br/>2-8 Players, Recommended 6-8 Players, 15 min playtime'
+								}
+							,								{
+									key: 'game-165',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Codenames: Pictures</b><br/>2-8 Players, Recommended 6 Players, 20 min playtime'
+								}
+							,								{
+									key: 'game-205',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Batavia</b><br/>3-5 Players, Recommended 3 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-293',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Munchkin Legends</b><br/>3-6 Players, 120 min playtime'
+								}
+							,								{
+									key: 'game-14',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Ticket To Ride: First Journey</b><br/>2-4 Players, Recommended 3-4 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-135',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Ticket To Ride: Europe</b><br/>2-5 Players, Recommended 4 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-30',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Ticket To Ride</b><br/>2-5 Players, Recommended 4 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-56',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Lords Of Waterdeep</b><br/>2-5 Players, Recommended 3-4 Players, 120 min playtime'
+								}
+							,								{
+									key: 'game-51',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Roll For The Galaxy</b><br/>2-5 Players, Recommended 3-4 Players, 45 min playtime'								
+								}
+							,								{
+									key: 'game-150',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Clank!: A Deck-Building Adventure</b><br/>1-4 Players, Recommended 3-4 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-d344',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Tokaido</b><br>2-5 Players, Recommended 4 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-245',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Clank!: Sunken Treasures Expansion</b><br/>2-4 Players, Recommended 3-4 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-107',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Cave Troll</b><br/>2-4 Players, Recommended 4 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-117',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Drakon: 4th Edition</b><br/>2-6 Players, Recommended 4 Players, 40 min playtime'
+								}
+							,								{
+									key: 'game-288',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>The Magic Labyrinth</b><br/>2-4 Players, Recommended 3-4 Players, 15 min playtime'
+								}
+							,								{
+									key: 'game-116',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Arctic Scavengers: Base Game + HQ + Recon</b><br/>1-5 Players, Recommended 4 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-53',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Cards Against Humanity</b><br/>'
+								}
+							,								{
+									key: 'game-132',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Machi Koro: Bright Lights, Big City</b><br/>2-5 Players, Recommended 4 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-110',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Pandemic</b><br/>2-4 Players, Recommended 4 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-95',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Pandemic: Iberia</b><br/>2-5 Players, Recommended 4 Players, 45 min playtime'
+								}
+							,								{
+									key: 'game-126',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Karuba</b><br/>2-4 Players, Recommended 4 Players, 40 min playtime'
+								}
+							,								{
+									key: 'game-190',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan</b><br/>3-4 Players, Recommended 4 Players, 120 min playtime'
+								}
+							,								{
+									key: 'game-11',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Tumult Royale</b><br/>2-4 Players, Recommended 4 Players, 40 min playtime'
+								}
+							,								{
+									key: 'game-183',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>King of New York</b><br/>2-6 Players, Recommended 4 Players, 40 min playtime'
+								}
+							,								{
+									key: 'game-62',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>King of Tokyo</b><br/>2-6 Players, Recommended 4-5 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-172',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Betrayal At House On The Hill</b><br/>3-6 Players, Recommended 5-6 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-81',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders</b><br/>2-7 Players, Recommended 4 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-129',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Mysterium</b><br/>2-7 Players, Recommended 5-6 Players, 42 min playtime'
+								}
+							,								{
+									key: 'game-20',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Captain Sonar</b><br/>2-8 Players, Recommended 8 Players, 60 min playtime'
+								}
+							,								{
+									key: 'game-10',
+																			selected: false,
+																		isSelectable: false,	
+									isDeselectable: false,
+																		toolTip: '<b>Specter Ops</b><br/>2-5 Players, Recommended 3 Players, 90 min playtime'
+								}
+							,								{
+									key: 'game-78',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Mechs vs Minions</b><br/>2-4 Players, Recommended 4 Players, 90 min playtime'
+								}
+							,								{
+									key: 'game-206',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Mansions of Madness: 2nd Edition</b><br/>Includes the Beyond the Threshold Expansion<br/><br/>1-5 Players, Recommended 3-4 Players, 180 min playtime</p>'
+								}
+							,								{
+									key: 'game-164',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dominion</b><br/>Includes the Alchemy, Intrigue, and Seaside Expansions<br/><br/>2-4 Players, Recommended 3 Players, 30 min playtime'
+								}
+							,								{
+									key: 'game-243',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Legendary: A Marvel Deck Building Game</b><br/>Includes the Dark City, Guardians of the Galaxy, Secret Wars Volume 1, and Secret Wars Volume 2 Expansions<br/><br/>1-5 Players, Recommended 3 Players, 45-60 min playtime'
+								}
+							,								{
+									key: 'game-263',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Through the Ages: A New Story of Civilization</b><br/>2-4 Players, Recommended 3 Players, 240 min playtime'
+								}
+							,								{
+									key: 'game-260',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Pandemic Legacy: Season 1</b><br/>2-4 Players, Recommended 4 Players, 60 min playtime'
+								}
+								
+													
+											]
+			});
+					});
+				var width = 1000;
+		var height = 1371;
+		var multiplier = 2;
+		function smaller(){
+			width = width/2;
+			height = height/2;
+			multiplier = multiplier*2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		function bigger(){
+			width = width*2;
+			height = height*2;
+			multiplier = multiplier/2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		
+			</script>
+</head>
+	<body style="text-align:center;background-color:#eff0f2;font:12px Verdana;">
+					<p style="font-size:20px;"></p>
+			<div id="container" style="width:1000px;margin:15px auto 15px auto;">
+				<img id="picture" src="BoardGames.JPG" id="picture" width="1000" style="border:1px solid blue;" usemap="#map"/>
+				<map name="map" id="map">									<area href="https://boardgamegeek.com/boardgame/187645/star-wars-rebellion" target="_BLANK" data-key="game-138" tooltip="" href="#" shape="poly" coords="38,235,654,233,657,560,65,564" />
+																	<area href="https://boardgamegeek.com/boardgame/170216/blood-rage" target="_BLANK" data-key="game-189" tooltip="" href="#" shape="poly" coords="31,571,41,777,665,780,657,583" />
+																	<area href="https://boardgamegeek.com/boardgame/142992/gravwell-escape-9th-dimension" target="_BLANK" data-key="game-9" tooltip="" href="#" shape="poly" coords="662,273,819,274,823,781,673,781" />
+																	<area href="https://boardgamegeek.com/boardgame/157969/sheriff-nottingham" target="_BLANK" data-key="game-182" tooltip="" href="#" shape="poly" coords="824,244,982,246,987,779,835,779" />
+																	<area href="https://boardgamegeek.com/boardgame/103885/star-wars-x-wing-miniatures-game" target="_BLANK" data-key="game-155" tooltip="" href="#" shape="poly" coords="1084,248,1087,778,992,778,985,249" />
+																	<area href="https://boardgamegeek.com/boardgame/183562/star-wars-x-wing-miniatures-game-force-awakens-cor" target="_BLANK" data-key="game-141" tooltip="" href="#" shape="poly" coords="1092,245,1213,247,1208,777,1095,779" />
+																	<area href="https://boardgamegeek.com/boardgame/166384/spyfall" target="_BLANK" data-key="game-255" tooltip="" href="#" shape="poly" coords="1212,360,1305,361,1307,776,1211,779" />
+																	<area href="https://boardgamegeek.com/boardgame/173346/7-wonders-duel" target="_BLANK" data-key="game-128" tooltip="" href="#" shape="poly" coords="1319,358,1417,360,1410,774,1310,774" />
+																	<area href="https://boardgamegeek.com/boardgame/3181/farkle" target="_BLANK" data-key="game-250" tooltip="" href="#" shape="poly" coords="1416,131,1615,122,1612,330,1419,336,1411,359,1373,356,1368,283" />
+																	<area href="https://boardgamegeek.com/boardgame/50/lost-cities" target="_BLANK" data-key="game-249" tooltip="" href="#" shape="poly" coords="1428,365,1517,364,1516,776,1427,774" />
+																	<area href="https://boardgamegeek.com/boardgame/163412/patchwork" target="_BLANK" data-key="game-97" tooltip="" href="#" shape="poly" coords="1524,356,1620,355,1611,770,1521,772" />
+																	<area href="https://boardgamegeek.com/boardgame/131357/coup" target="_BLANK" data-key="game-91" tooltip="" href="#" shape="poly" coords="1727,62,1952,60,1949,127,1750,129,1685,201,1666,200,1667,139" />
+																	<area href="https://boardgamegeek.com/boardgame/478/citadels" target="_BLANK" data-key="game-257" tooltip="" href="#" shape="poly" coords="1750,130,1961,129,1957,206,1749,205,1699,207,1671,230,1669,222" />
+																	<area href="https://boardgamegeek.com/boardgame/147949/one-night-ultimate-werewolf" target="_BLANK" data-key="game-136" tooltip="" href="#" shape="poly" coords="1696,207,1961,206,1962,285,1692,289,1687,295,1646,296,1630,301,1627,282" />
+																	<area href="https://boardgamegeek.com/boardgame/65244/forbidden-island" target="_BLANK" data-key="game-130" tooltip="" href="#" shape="poly" coords="1637,296,1940,292,1946,439,1649,442,1620,449,1619,357,1606,356,1615,335,1615,319" />
+																	<area href="https://boardgamegeek.com/boardgame/205158/codenames-deep-undercover" target="_BLANK" data-key="game-8" tooltip="" href="#" shape="poly" coords="1620,446,1949,444,1945,557,1621,559" />
+																	<area href="https://boardgamegeek.com/boardgame/178900/codenames" target="_BLANK" data-key="game-32" tooltip="" href="#" shape="poly" coords="1620,562,1944,562,1937,666,1619,670" />
+																	<area href="https://boardgamegeek.com/boardgame/198773/codenames-pictures" target="_BLANK" data-key="game-165" tooltip="" href="#" shape="poly" coords="1615,772,1770,769,1784,737,1921,736,1926,772,1936,771,1937,672,1615,676" />
+																	<area href="https://boardgamegeek.com/boardgame/35248/batavia" target="_BLANK" data-key="game-205" tooltip="" href="#" shape="poly" coords="245,990,715,992,721,1156,697,1181,255,1181" />
+																	<area href="https://boardgamegeek.com/boardgame/171199/munchkin-legends-deluxe" target="_BLANK" data-key="game-293" tooltip="" href="#" shape="poly" coords="211,1184,695,1189,722,1159,744,1159,729,1187,730,1285,214,1280" />
+																	<area href="https://boardgamegeek.com/boardgame/205125/ticket-ride-first-journey-us" target="_BLANK" data-key="game-14" tooltip="" href="#" shape="poly" coords="206,1282,742,1290,749,1397,210,1394" />
+																	<area href="https://boardgamegeek.com/boardgame/14996/ticket-ride-europe" target="_BLANK" data-key="game-135" tooltip="" href="#" shape="poly" coords="195,1400,751,1404,754,1536,200,1537" />
+																	<area href="https://boardgamegeek.com/boardgame/9209/ticket-ride" target="_BLANK" data-key="game-30" tooltip="" href="#" shape="poly" coords="202,1539,750,1544,751,1676,246,1680,225,1660,207,1659" />
+																	<area href="https://boardgamegeek.com/boardgame/110327/lords-waterdeep" target="_BLANK" data-key="game-56" tooltip="" href="#" shape="poly" coords="742,987,885,985,902,1671,759,1674" />
+																	<area href="https://boardgamegeek.com/boardgame/132531/roll-galaxy" target="_BLANK" data-key="game-51" tooltip="" href="#" shape="poly" coords="897,1087,1015,1085,1040,1110,1045,1671,907,1670" />
+																	<area href="https://boardgamegeek.com/boardgame/201808/clank-deck-building-adventure" target="_BLANK" data-key="game-150" tooltip="" href="#" shape="poly" coords="1029,1069,1161,1066,1200,1084,1200,1671,1050,1669" />
+																	<area href="https://boardgamegeek.com/boardgame/123540/tokaido" target="_BLANK" data-key="game-d344" tooltip="" href="#" shape="poly" coords="1204,1082,1169,1066,1297,1061,1345,1076,1345,1666,1202,1669" />
+																	<area href="https://boardgamegeek.com/boardgameexpansion/218103/clank-sunken-treasures" target="_BLANK" data-key="game-245" tooltip="" href="#" shape="poly" coords="1402,1186,1346,1165,1356,1099,1837,1095,1921,1119,1917,1191" />
+																	<area href="https://boardgamegeek.com/boardgame/4491/cave-troll" target="_BLANK" data-key="game-107" tooltip="" href="#" shape="poly" coords="1369,1177,1424,1196,1917,1199,1920,1292,1426,1287,1366,1247" />
+																	<area href="https://boardgamegeek.com/boardgame/171630/drakon-fourth-edition" target="_BLANK" data-key="game-117" tooltip="" href="#" shape="poly" coords="1374,1256,1427,1296,1921,1294,1919,1390,1429,1392,1367,1334" />
+																	<area href="https://boardgamegeek.com/boardgame/41916/magic-labyrinth" target="_BLANK" data-key="game-288" tooltip="" href="#" shape="poly" coords="1349,1405,1347,1336,1365,1334,1431,1401,1922,1396,1915,1526,1347,1530" />
+																	<area href="https://boardgamegeek.com/boardgame/174226/arctic-scavengers-base-gamehqrecon" target="_BLANK" data-key="game-116" tooltip="" href="#" shape="poly" coords="1350,1535,1919,1525,1919,1654,1352,1662" />
+																	<area href="https://boardgamegeek.com/boardgame/50381/cards-against-humanity" target="_BLANK" data-key="game-53" tooltip="" href="#" shape="poly" coords="320,1944,376,1834,504,1831,504,1852,565,1856,574,1967,510,2059,325,2061" />
+																	<area href="https://boardgamegeek.com/boardgame/205494/machi-koro-bright-lights-big-city" target="_BLANK" data-key="game-132" tooltip="" href="#" shape="poly" coords="257,1939,315,1940,325,2064,511,2060,574,1966,571,1941,602,1940,592,1960,592,2182,235,2190,226,2065,220,1985" />
+																	<area href="https://boardgamegeek.com/boardgame/30549/pandemic" target="_BLANK" data-key="game-110" tooltip="" href="#" shape="poly" coords="235,2191,592,2189,592,2290,240,2294" />
+																	<area href="https://boardgamegeek.com/boardgame/198928/pandemic-iberia" target="_BLANK" data-key="game-95" tooltip="" href="#" shape="poly" coords="236,2299,587,2294,587,2369,241,2371" />
+																	<area href="https://boardgamegeek.com/boardgame/183251/karuba" target="_BLANK" data-key="game-126" tooltip="" href="#" shape="poly" coords="244,2374,572,2374,571,2482,277,2487,250,2474" />
+																	<area href="https://boardgamegeek.com/boardgame/13/catan" target="_BLANK" data-key="game-190" tooltip="" href="#" shape="poly" coords="591,1961,646,1845,776,1845,752,1959,764,2474,594,2476" />
+																	<area href="https://boardgamegeek.com/boardgame/180591/tumult-royale" target="_BLANK" data-key="game-11" tooltip="" href="#" shape="poly" coords="757,1959,780,1827,899,1827,895,1957,904,2472,764,2474" />
+																	<area href="https://boardgamegeek.com/boardgame/160499/king-new-york" target="_BLANK" data-key="game-183" tooltip="" href="#" shape="poly" coords="899,2031,901,1862,1005,1865,1026,2030,1030,2471,904,2474" />
+																	<area href="https://boardgamegeek.com/boardgame/70323/king-tokyo" target="_BLANK" data-key="game-62" tooltip="" href="#" shape="poly" coords="1031,2030,1006,1865,1124,1865,1161,2025,1164,2471,1036,2471" />
+																	<area href="https://boardgamegeek.com/boardgame/10547/betrayal-house-hill" target="_BLANK" data-key="game-172" tooltip="" href="#" shape="poly" coords="1162,2005,1122,1865,1265,1866,1320,1999,1331,2469,1167,2470" />
+																	<area href="https://boardgamegeek.com/boardgame/68448/7-wonders" target="_BLANK" data-key="game-81" tooltip="" href="#" shape="poly" coords="1319,1970,1271,1837,1390,1832,1470,1969,1474,2467,1332,2466" />
+																	<area href="https://boardgamegeek.com/boardgame/181304/mysterium" target="_BLANK" data-key="game-129" tooltip="" href="#" shape="poly" coords="1477,1970,1400,1835,1520,1829,1626,1967,1619,2464,1477,2466" />
+																	<area href="https://boardgamegeek.com/boardgame/171131/captain-sonar" target="_BLANK" data-key="game-20" tooltip="" href="#" shape="poly" coords="1629,1941,1534,1816,1651,1816,1766,1941,1751,2461,1616,2464" />
+																	<area href="https://boardgamegeek.com/boardgame/155624/specter-ops" target="_BLANK" data-key="game-10" tooltip="" href="#" shape="poly" coords="1764,1940,1669,1812,1757,1812,1901,1944,1887,2461,1755,2457" />
+																	<area href="https://boardgamegeek.com/boardgame/209010/mechs-vs-minions" target="_BLANK" data-key="game-78" tooltip="" href="#" shape="poly" coords="490,2679,500,2659,1425,2647,1431,2679,1426,2869,499,2874" />
+																	<area href="https://boardgamegeek.com/boardgame/205059/mansions-madness-second-edition" target="_BLANK" data-key="game-206" tooltip="" href="#" shape="poly" coords="276,3001,274,2920,335,2734,487,2729,495,2874,775,2881,764,3000,774,3299,295,3307" />
+																	<area href="https://boardgamegeek.com/boardgame/36218/dominion" target="_BLANK" data-key="game-164" tooltip="" href="#" shape="poly" coords="792,2930,799,2877,1390,2874,1399,2930,1395,3117,797,3114" />
+																	<area href="https://boardgamegeek.com/boardgame/129437/legendary-marvel-deck-building-game" target="_BLANK" data-key="game-243" tooltip="" href="#" shape="poly" coords="792,3119,1396,3122,1394,3301,802,3300" />
+																	<area href="https://boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization" target="_BLANK" data-key="game-263" tooltip="" href="#" shape="poly" coords="1435,2851,1427,2841,1435,2676,1427,2646,1509,2644,1562,2854,1544,3274,1420,3270" />
+																	<area href="https://boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1" target="_BLANK" data-key="game-260" tooltip="" href="#" shape="poly" coords="1547,3270,1566,2832,1509,2645,1650,2644,1707,2840,1686,3272" />
+																	
+														
+												</map>
+			</div>
+			</p>
+
+</html>
+
